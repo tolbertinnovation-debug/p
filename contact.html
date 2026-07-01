@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Pastor Naklee Quamele Ministry</title>
   <meta name="description" content="Contact Pastor Naklee Quamele Ministry for speaking invitations, training registration, prayer requests, and ministry support.">
+  <link rel="icon" href="https://i.ibb.co/KcW3Wb64/709507763-4282957501850639-8538408039101713939-n.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact | Pastor Naklee Quamele Ministry">
+  <meta property="og:description" content="Reach out for speaking invitations, training registration, prayer requests, and ministry support.">
+  <meta property="og:image" content="https://i.ibb.co/KcW3Wb64/709507763-4282957501850639-8538408039101713939-n.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ROOT VARIABLES & RESETS */
@@ -634,13 +640,13 @@
       </div>
       <form class="contact-form" id="contactForm" onsubmit="return handleSubmit(event);">
         <div class="form-row">
-          <div class="form-group"><label>First Name</label><input type="text" name="firstName" placeholder="Enter first name" required /></div>
-          <div class="form-group"><label>Last Name</label><input type="text" name="lastName" placeholder="Enter last name" required /></div>
+          <div class="form-group"><label for="firstName">First Name</label><input id="firstName" type="text" name="firstName" placeholder="Enter first name" required /></div>
+          <div class="form-group"><label for="lastName">Last Name</label><input id="lastName" type="text" name="lastName" placeholder="Enter last name" required /></div>
         </div>
-        <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="your@email.com" required /></div>
+        <div class="form-group"><label for="email">Email Address</label><input id="email" type="email" name="email" placeholder="your@email.com" required /></div>
         <div class="form-group">
-          <label>Inquiry Type</label>
-          <select name="inquiryType" required>
+          <label for="inquiryType">Inquiry Type</label>
+          <select id="inquiryType" name="inquiryType" required>
             <option value="">Select a subject</option>
             <option>Speaking / Event Invitation</option>
             <option>Discipleship Training</option>
@@ -648,7 +654,7 @@
             <option>General Inquiry</option>
           </select>
         </div>
-        <div class="form-group"><label>Your Message</label><textarea name="message" placeholder="Share how we can serve you..." required></textarea></div>
+        <div class="form-group"><label for="message">Your Message</label><textarea id="message" name="message" placeholder="Share how we can serve you..." required></textarea></div>
         <button type="submit" class="form-submit">Send Message</button>
         <div class="form-success" id="formSuccess">✓ Message sent — we'll be in touch soon. God bless you.</div>
       </form>
