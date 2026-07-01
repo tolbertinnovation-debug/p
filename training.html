@@ -1,675 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Training & Discipleship Programs | Pastor Naklee Quamele Ministry</title>
-  <meta name="description" content="Explore discipleship training programs from Pastor Naklee Quamele designed to equip believers in faith, leadership, and Bible study.">
-  <link rel="icon" href="https://i.ibb.co/KcW3Wb64/709507763-4282957501850639-8538408039101713939-n.jpg">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Training & Discipleship Programs | Pastor Naklee Quamele Ministry">
-  <meta property="og:description" content="Discipleship training programs designed to equip believers in faith, leadership, and Bible study.">
-  <meta property="og:image" content="https://i.ibb.co/KcW3Wb64/709507763-4282957501850639-8538408039101713939-n.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* ROOT VARIABLES & RESETS */
-    :root {
-      --blue: #1A3A84;
-      --gold: #C8880C;
-      --teal: #0A7A68;
-      --violet: #6120A0;
-      --rose: #C82050;
-      --text-dark: #0C1424;
-      --text-light: #3d4a62;
-      --bg-light: #f7f8fb;
-      --shadow-sm: 0 4px 16px rgba(12, 20, 36, 0.08);
-      --shadow-md: 0 12px 32px rgba(12, 20, 36, 0.12);
-      --shadow-lg: 0 20px 48px rgba(26, 58, 132, 0.2);
-      --font-serif-display: 'Cormorant Garamond', serif;
-      --font-serif-headings: 'Cinzel', serif;
-      --font-sans: 'DM Sans', sans-serif;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: var(--font-sans);
-      color: var(--text-dark);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* TYPOGRAPHY */
-    h1, h2, h3, h4, h5, h6 {
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 16px;
-    }
-
-    h1 { font-size: 64px; font-family: var(--font-serif-display); }
-    h2 { font-size: 52px; font-family: var(--font-serif-display); }
-    h3 { font-size: 28px; font-family: var(--font-serif-headings); }
-
-    p {
-      font-size: 16px;
-      line-height: 1.8;
-      color: var(--text-light);
-    }
-
-    em { font-style: italic; }
-
-    .section-label {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 16px;
-    }
-
-    /* NAVIGATION */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 40px;
-      background: transparent;
-      z-index: 1000;
-      transition: all 0.3s ease;
-    }
-
-    nav.scrolled {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-      padding: 16px 40px;
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-family: var(--font-serif-display);
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--text-dark);
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-
-    .nav-logo img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-    }
-
-    .nav-logo span {
-      color: var(--gold);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--text-dark);
-      text-decoration: none;
-      transition: all 0.3s;
-      position: relative;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--gold);
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--gold);
-      transition: width 0.3s;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .nav-cta {
-      padding: 12px 24px;
-      background: linear-gradient(135deg, var(--gold) 0%, var(--rose) 100%);
-      color: #fff;
-      font-weight: 700;
-      font-size: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(200, 136, 12, 0.25);
-      transition: all 0.3s;
-    }
-
-    .nav-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(200, 136, 12, 0.35);
-    }
-
-    @media (max-width: 1024px) {
-      nav { padding: 16px 24px; }
-      .nav-links { gap: 20px; }
-    }
-
-    @media (max-width: 560px) {
-      nav { padding: 14px 16px; }
-      .nav-logo { font-size: 14px; gap: 8px; }
-      .nav-logo img { width: 32px; height: 32px; }
-      .nav-links { gap: 12px; }
-      .nav-links a { font-size: 12px; }
-      .nav-cta { padding: 10px 16px; font-size: 10px; }
-    }
-
-    /* ANIMATIONS */
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .reveal {
-      animation: fadeUp 0.8s ease forwards;
-      opacity: 0;
-    }
-
-    /* PAGE HERO */
-    .page-hero {
-      background: linear-gradient(135deg, #1A3A84 0%, #6120A0 100%);
-      color: #fff;
-      padding: 120px 24px;
-      text-align: center;
-      margin-top: 80px;
-      position: relative;
-    }
-
-    .page-hero .container {
-      max-width: 800px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .page-hero h1 {
-      color: #fff;
-      margin-bottom: 24px;
-      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-    }
-
-    .page-hero p {
-      font-size: 18px;
-      color: rgba(255, 255, 255, 0.95);
-      margin-bottom: 16px;
-    }
-
-    .page-hero .section-label {
-      color: var(--gold);
-    }
-
-    /* TRAINING SECTION */
-    .training-section {
-      padding: 100px 24px;
-      background: #fff;
-    }
-
-    .training-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-      margin-bottom: 80px;
-    }
-
-    /* TRAINING CARD */
-    .training-card {
-      background: #fff;
-      border: 2px solid transparent;
-      border-radius: 12px;
-      padding: 40px 32px;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.3s ease;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-    }
-
-    .training-card:hover {
-      transform: translateY(-12px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--gold);
-    }
-
-    .training-num {
-      font-family: var(--font-serif-display);
-      font-size: 64px;
-      font-weight: 700;
-      color: var(--gold);
-      opacity: 0.15;
-      position: absolute;
-      top: 12px;
-      right: 20px;
-    }
-
-    .training-icon {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(135deg, var(--blue) 0%, var(--violet) 100%);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 24px;
-    }
-
-    .training-icon svg {
-      width: 40px;
-      height: 40px;
-      stroke: #fff;
-      stroke-width: 2;
-      fill: none;
-    }
-
-    .training-title {
-      font-family: var(--font-serif-headings);
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 16px;
-    }
-
-    .training-desc {
-      font-size: 15px;
-      color: var(--text-light);
-      line-height: 1.6;
-      margin-bottom: 24px;
-      flex: 1;
-    }
-
-    .training-tag {
-      display: inline-block;
-      padding: 8px 16px;
-      background: var(--bg-light);
-      color: var(--blue);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      border-radius: 20px;
-    }
-
-    /* PROGRAM INFO */
-    .program-info {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-      margin-bottom: 80px;
-      padding: 60px 0;
-      border-top: 1px solid #e8ecf1;
-      border-bottom: 1px solid #e8ecf1;
-    }
-
-    .program-info p {
-      margin-bottom: 20px;
-    }
-
-    .program-benefits h3 {
-      font-size: 24px;
-      margin-bottom: 32px;
-    }
-
-    .benefit-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .benefit-item {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-
-    .benefit-item span {
-      flex-shrink: 0;
-      color: var(--gold);
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 1;
-      margin-top: 2px;
-    }
-
-    .benefit-item div {
-      font-size: 15px;
-      color: var(--text-light);
-      line-height: 1.6;
-    }
-
-    /* CTA PANEL */
-    .cta-panel {
-      background: linear-gradient(135deg, var(--text-dark) 0%, var(--blue) 100%);
-      color: #fff;
-      border-radius: 16px;
-      padding: 60px 50px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .cta-panel h2 {
-      color: #fff;
-      font-size: 40px;
-      margin-bottom: 20px;
-    }
-
-    .cta-panel p {
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 24px;
-    }
-
-    .cta-button {
-      display: inline-block;
-      padding: 16px 36px;
-      background: linear-gradient(135deg, var(--gold) 0%, var(--rose) 100%);
-      color: #fff;
-      font-weight: 700;
-      font-size: 13px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 8px 24px rgba(200, 136, 12, 0.3);
-      transition: all 0.3s;
-    }
-
-    .cta-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 32px rgba(200, 136, 12, 0.4);
-    }
-
-    /* FOOTER */
-    .footer {
-      background: var(--text-dark);
-      color: #fff;
-    }
-
-    .footer-top {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 40px;
-      padding: 60px 24px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .footer a {
-      color: rgba(255, 255, 255, 0.7);
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-
-    .footer a:hover {
-      color: var(--gold);
-    }
-
-    .footer-bottom {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 24px;
-      text-align: center;
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.6);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .footer-copy {
-      margin: 0;
-      flex: 1;
-    }
-
-    .footer-legal {
-      display: flex;
-      gap: 24px;
-    }
-
-    @media (max-width: 860px) {
-      .footer-top { grid-template-columns: repeat(2, 1fr); }
-      .program-info { grid-template-columns: 1fr; gap: 40px; }
-      .cta-panel { grid-template-columns: 1fr; gap: 30px; }
-    }
-
-    @media (max-width: 560px) {
-      .page-hero { padding: 80px 24px; margin-top: 60px; }
-      h1 { font-size: 40px; }
-      h2 { font-size: 32px; }
-      .training-section { padding: 60px 24px; }
-      .training-grid { grid-template-columns: 1fr; }
-      .footer-top { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-      .footer-legal { justify-content: center; }
-      .cta-panel { padding: 40px 24px; }
-      .cta-panel h2 { font-size: 28px; }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Training &amp; Discipleship Programs | Pastor Naklee Quamele Ministry</title>
+  <meta name="description" content="Explore discipleship training programs from Pastor Naklee Quamele designed to equip believers in faith, leadership, and Bible study." />
+  <link rel="icon" href="https://i.ibb.co/KcW3Wb64/709507763-4282957501850639-8538408039101713939-n.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Training & Discipleship Programs | Pastor Naklee Quamele Ministry" />
+  <meta property="og:description" content="Discipleship training programs designed to equip believers in faith, leadership, and Bible study." />
+  <meta property="og:image" content="https://i.ibb.co/KcW3Wb64/709507763-4282957501850639-8538408039101713939-n.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Cinzel:wght@400;600;700;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<nav>
-  <a href="index.html" class="nav-logo">
-    <img src="https://i.ibb.co/KcW3Wb64/709507763-4282957501850639-8538408039101713939-n.jpg" alt="Naklee Quamele logo" width="38" height="38" />
-    Pastor Naklee <span>Quamele</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="sermons.html">Sermons</a></li>
-    <li><a href="training.html" class="active">Training</a></li>
-    <li><a href="resources.html">Resources</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <a href="contact.html" class="nav-cta">Connect</a>
-</nav>
-<section class="page-hero">
-  <div class="container">
-    <span class="section-label">Discipleship Training</span>
-    <h1>Grow Stronger in Faith with <em>Guided Ministry Training</em></h1>
-    <p>Join transformational programs built to root believers in Scripture, deepen leadership, and equip every generation for God’s call.</p>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="nav-drawer" id="navDrawer">
+    <ul class="nav-drawer-links">
+      <li><a href="index.html" class="drawer-link">Home</a></li>
+      <li><a href="about.html" class="drawer-link">About</a></li>
+      <li><a href="sermons.html" class="drawer-link">Sermons</a></li>
+      <li><a href="training.html" class="drawer-link">Training</a></li>
+      <li><a href="resources.html" class="drawer-link">Resources</a></li>
+      <li><a href="contact.html" class="drawer-link">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-drawer-cta drawer-link">Connect with Ministry</a>
   </div>
-</section>
-<section class="training-section">
-  <div class="container">
-    <div style="text-align: center; margin-bottom: 60px;">
-      <span class="section-label">Discipleship Programs</span>
-      <h2 style="font-family: var(--font-serif-display); font-size: 52px; font-weight: 700; color: var(--text-dark); margin-bottom: 24px; letter-spacing: -1px;">Equipping Believers for <em>Kingdom Work</em></h2>
-      <p style="font-size: 16px; color: var(--text-light); max-width: 700px; margin: 0 auto;">Structured training programs designed to root believers in the Word, develop their character, and release them into their God-given calling.</p>
+
+  <nav id="mainNav">
+    <a href="index.html" class="nav-logo">
+      <img src="https://i.ibb.co/KcW3Wb64/709507763-4282957501850639-8538408039101713939-n.jpg" alt="Naklee Quamele logo" />
+      Pastor Naklee <span>Quamele · Liberia</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="sermons.html">Sermons</a></li>
+      <li><a href="training.html" class="active">Training</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Connect</a>
+    <button id="hamburgerBtn" class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero interior">
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-4"></div>
+    <div class="hero-inner">
+      <span class="section-label light">Discipleship Training</span>
+      <h1>Grow Stronger in Faith with <em>Guided Ministry Training</em></h1>
+      <p>Join transformational programs built to root believers in Scripture, deepen leadership, and equip every generation for God's call.</p>
     </div>
+  </section>
 
-    <div class="training-grid">
-      <article class="training-card">
-        <div class="training-num">01</div>
-        <div class="training-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        </div>
-        <h3 class="training-title">Foundations of Faith</h3>
-        <p class="training-desc">An 8-week foundational course covering salvation, baptism, prayer, worship, and the basics of Christian living. Perfect for new believers seeking a strong start.</p>
-        <span class="training-tag">8 Weeks</span>
-      </article>
-
-      <article class="training-card">
-        <div class="training-num">02</div>
-        <div class="training-icon">
-          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3 class="training-title">Leaders in the Making</h3>
-        <p class="training-desc">A 12-week intensive program for developing servant leaders — covering biblical leadership, accountability, vision, mentorship, and spiritual growth.</p>
-        <span class="training-tag">12 Weeks</span>
-      </article>
-
-      <article class="training-card">
-        <div class="training-num">03</div>
-        <div class="training-icon">
-          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-        </div>
-        <h3 class="training-title">Bible Study Intensive</h3>
-        <p class="training-desc">Deep-dive study of key biblical books and themes. Learn hermeneutics, interpretation methods, and how to teach the Word effectively to others.</p>
-        <span class="training-tag">Ongoing</span>
-      </article>
-
-      <article class="training-card">
-        <div class="training-num">04</div>
-        <div class="training-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
-        </div>
-        <h3 class="training-title">Women in Ministry</h3>
-        <p class="training-desc">Empowering women to discover and walk boldly in their spiritual gifts. Covers calling, identity in Christ, and ministry to family and community.</p>
-        <span class="training-tag">6 Weeks</span>
-      </article>
-    </div>
-
-    <!-- PROGRAM INFO -->
-    <div class="program-info">
-      <div>
-        <h2 style="font-family: var(--font-serif-display); font-size: 40px; margin-bottom: 24px; color: var(--text-dark);">How Our <em>Training Works</em></h2>
-        <p>Our training programs are designed for churches, small groups, and individuals who want to move beyond knowledge into Kingdom impact. Each course blends biblical teaching, group discussion, life application, and practical mentorship.</p>
-        <p>Courses are offered in-person and online, and every participant receives study notes, workbook guides, prayer support, and ongoing mentorship from the ministry team.</p>
+  <!-- PROGRAMS -->
+  <section>
+    <div class="container">
+      <div class="section-head center">
+        <span class="section-label">Discipleship Programs</span>
+        <h2 class="section-title">Equipping Believers for <em>Kingdom Work</em></h2>
+        <p class="section-body" style="margin:0 auto;">Structured training programs designed to root believers in the Word, develop their character, and release them into their God-given calling.</p>
       </div>
-      <div class="program-benefits">
-        <h3>Why Join a Program?</h3>
+      <div class="card-grid">
+        <article class="feature-card reveal">
+          <div class="feature-num">01</div>
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h3 class="feature-title">Foundations of Faith</h3>
+          <p class="feature-desc">An 8-week foundational course covering salvation, baptism, prayer, worship, and the basics of Christian living. Perfect for new believers seeking a strong start.</p>
+          <span class="feature-tag">8 Weeks</span>
+        </article>
+        <article class="feature-card reveal delay-1">
+          <div class="feature-num">02</div>
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3 class="feature-title">Leaders in the Making</h3>
+          <p class="feature-desc">A 12-week intensive program for developing servant leaders — covering biblical leadership, accountability, vision, mentorship, and spiritual growth.</p>
+          <span class="feature-tag">12 Weeks</span>
+        </article>
+        <article class="feature-card reveal delay-2">
+          <div class="feature-num">03</div>
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <h3 class="feature-title">Bible Study Intensive</h3>
+          <p class="feature-desc">Deep-dive study of key biblical books and themes. Learn hermeneutics, interpretation methods, and how to teach the Word effectively to others.</p>
+          <span class="feature-tag">Ongoing</span>
+        </article>
+        <article class="feature-card reveal delay-3">
+          <div class="feature-num">04</div>
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></div>
+          <h3 class="feature-title">Women in Ministry</h3>
+          <p class="feature-desc">Empowering women to discover and walk boldly in their spiritual gifts. Covers calling, identity in Christ, and ministry to family and community.</p>
+          <span class="feature-tag">6 Weeks</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="about">
+    <div class="container split">
+      <div class="reveal">
+        <span class="section-label">How It Works</span>
+        <h2 class="section-title">How Our <em>Training Works</em></h2>
+        <p class="section-body" style="margin-bottom:20px;">Our programs are designed for churches, small groups, and individuals who want to move beyond knowledge into Kingdom impact. Each course blends biblical teaching, group discussion, life application, and practical mentorship.</p>
+        <p class="section-body" style="margin-bottom:0;">Courses are offered in-person and online, and every participant receives study notes, workbook guides, prayer support, and ongoing mentorship from the ministry team.</p>
+      </div>
+      <div class="reveal delay-1">
+        <h3 style="font-family:var(--font-serif-headings); font-size:22px; color:var(--text-dark); margin-bottom:28px;">Why Join a Program?</h3>
         <div class="benefit-list">
-          <div class="benefit-item"><span>✓</span><div>Build a strong foundation in Scripture and spiritual disciplines.</div></div>
-          <div class="benefit-item"><span>✓</span><div>Grow your leadership and ministry gifting under trusted guidance.</div></div>
-          <div class="benefit-item"><span>✓</span><div>Join a supportive community of learners pursuing God together.</div></div>
-          <div class="benefit-item"><span>✓</span><div>Receive practical tools for discipleship, teaching, and service.</div></div>
-          <div class="benefit-item"><span>✓</span><div>Experience lasting transformation through biblical accountability.</div></div>
+          <div class="benefit-item"><span class="check">✓</span><div>Build a strong foundation in Scripture and spiritual disciplines.</div></div>
+          <div class="benefit-item"><span class="check">✓</span><div>Grow your leadership and ministry gifting under trusted guidance.</div></div>
+          <div class="benefit-item"><span class="check">✓</span><div>Join a supportive community of learners pursuing God together.</div></div>
+          <div class="benefit-item"><span class="check">✓</span><div>Receive practical tools for discipleship, teaching, and service.</div></div>
+          <div class="benefit-item"><span class="check">✓</span><div>Experience lasting transformation through biblical accountability.</div></div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- CTA PANEL -->
-    <div class="cta-panel">
+  <!-- CTA -->
+  <section>
+    <div class="container">
+      <div class="cta-panel reveal">
+        <div>
+          <h2>Ready to Begin Your Journey?</h2>
+          <p>Let our ministry team help you find the right course and registration path. Whether you are a new believer or an emerging leader, there is a place for you here.</p>
+          <a href="contact.html" class="btn-ghost on-dark">Enroll Now</a>
+        </div>
+        <div>
+          <p>For group registrations, church partnerships, corporate training, or event invitations, reach out today and our team will respond with next steps and current availability.</p>
+          <p style="margin-top:16px; font-size:14px; opacity:0.9;">Questions? Email us at <strong>info@nakleequamele.com</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-top">
       <div>
-        <h2>Ready to Begin Your Journey?</h2>
-        <p>Let our ministry team help you find the right course and registration path. Whether you are a new believer or an emerging leader, there is a place for you here.</p>
-        <a href="contact.html" class="cta-button">Enroll Now</a>
+        <div class="footer-logo">Pastor Naklee <span>Quamele</span></div>
+        <p class="footer-tagline">"Preaching the Gospel · Raising a Generation After God's Heart"</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="social-link" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.26 2.2.43.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.17.4.37 1 .43 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.26 1.8-.43 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.17-1 .37-2.2.43-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-1.8-.26-2.2-.43-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.17-.4-.37-1-.43-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.26-1.8.43-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.17 1-.37 2.2-.43C8.4 2.2 8.8 2.2 12 2.2zm0 3.4A6.4 6.4 0 1 0 18.4 12 6.4 6.4 0 0 0 12 5.6zm0 10.6A4.2 4.2 0 1 1 16.2 12 4.2 4.2 0 0 1 12 16.2zm6.6-10.9a1.5 1.5 0 1 0 1.5 1.5 1.5 1.5 0 0 0-1.5-1.5z"/></svg></a>
+          <a href="#" class="social-link" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.02V8.98L15.5 12z"/></svg></a>
+        </div>
       </div>
       <div>
-        <p>For group registrations, church partnerships, corporate training, or event invitations, reach out today and our team will respond with next steps and current availability.</p>
-        <p style="margin-top: 20px; font-size: 14px; opacity: 0.9;">Questions? Email us at <strong>info@nakleequamele.com</strong></p>
+        <div class="footer-col-title">Ministry</div>
+        <ul class="footer-links">
+          <li><a href="about.html">About Pastor Naklee</a></li>
+          <li><a href="sermons.html">Sermons &amp; Teachings</a></li>
+          <li><a href="training.html">Discipleship Training</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <ul class="footer-links">
+          <li><a href="resources.html">Study Materials</a></li>
+          <li><a href="resources.html">Devotionals</a></li>
+          <li><a href="mailto:info@nakleequamele.com">Email Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Connect</div>
+        <ul class="footer-links">
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:info@nakleequamele.com">info@nakleequamele.com</a></li>
+          <li><a href="tel:+2310770000000">+231 (0) 770 000 000</a></li>
+        </ul>
       </div>
     </div>
-  </div>
-</section>
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-top">
-    <div>
-      <div style="font-family: var(--font-serif-display); font-size: 18px; font-weight: 600; margin-bottom: 16px; color: var(--gold);">Pastor Naklee <span style="color: #fff;">Quamele</span></div>
-      <p style="font-size: 14px; line-height: 1.6; opacity: 0.8;">"Preaching the Gospel · Raising a Generation After God's Heart"</p>
+    <div class="footer-bottom">
+      <p class="footer-copy">Copyright © 2026 Pastor Naklee Quamele Ministry · Monrovia, Liberia. All rights reserved.</p>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
     </div>
-    <div>
-      <div style="font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin-bottom: 16px;">Ministry</div>
-      <ul style="list-style: none;">
-        <li style="margin-bottom: 12px;"><a href="about.html" style="font-size: 14px;">About Pastor Naklee</a></li>
-        <li style="margin-bottom: 12px;"><a href="sermons.html" style="font-size: 14px;">Sermons & Teachings</a></li>
-        <li style="margin-bottom: 12px;"><a href="training.html" style="font-size: 14px;">Discipleship Training</a></li>
-      </ul>
-    </div>
-    <div>
-      <div style="font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin-bottom: 16px;">Resources</div>
-      <ul style="list-style: none;">
-        <li style="margin-bottom: 12px;"><a href="resources.html" style="font-size: 14px;">Study Materials</a></li>
-        <li style="margin-bottom: 12px;"><a href="resources.html" style="font-size: 14px;">Sermon Archive</a></li>
-        <li style="margin-bottom: 12px;"><a href="resources.html" style="font-size: 14px;">Devotionals</a></li>
-      </ul>
-    </div>
-    <div>
-      <div style="font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin-bottom: 16px;">Connect</div>
-      <ul style="list-style: none;">
-        <li style="margin-bottom: 12px;"><a href="contact.html" style="font-size: 14px;">Invite to Speak</a></li>
-        <li style="margin-bottom: 12px;"><a href="contact.html" style="font-size: 14px;">Join Training</a></li>
-        <li style="margin-bottom: 12px;"><a href="mailto:info@nakleequamele.com" style="font-size: 14px;">info@nakleequamele.com</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p class="footer-copy">Copyright © 2026 Pastor Naklee Quamele Ministry · Monrovia, Liberia. All rights reserved.</p>
-    <div class="footer-legal">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Use</a>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<script>
-  // Navigation scroll effect
-  const nav = document.querySelector('nav');
-  const handleNavScroll = () => {
-    if (window.scrollY > 60) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  };
-  window.addEventListener('scroll', handleNavScroll);
-
-  // Reveal animation on scroll
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('reveal');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('section').forEach((section) => {
-    observer.observe(section);
-  });
-</script>
+  <script src="main.js"></script>
 </body>
 </html>

@@ -1,674 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resources & Tools | Pastor Naklee Quamele Ministry</title>
-  <meta name="description" content="Discover ministry resources from Pastor Naklee Quamele including devotional guides, sermon archives, study workbooks, and prayer support.">
-  <link rel="icon" href="https://i.ibb.co/KcW3Wb64/709507763-4282957501850639-8538408039101713939-n.jpg">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Resources & Tools | Pastor Naklee Quamele Ministry">
-  <meta property="og:description" content="Devotional guides, sermon archives, study workbooks, and prayer support to deepen your walk with God.">
-  <meta property="og:image" content="https://i.ibb.co/KcW3Wb64/709507763-4282957501850639-8538408039101713939-n.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* ROOT VARIABLES & RESETS */
-    :root {
-      --blue: #1A3A84;
-      --gold: #C8880C;
-      --teal: #0A7A68;
-      --violet: #6120A0;
-      --rose: #C82050;
-      --text-dark: #0C1424;
-      --text-light: #3d4a62;
-      --bg-light: #f7f8fb;
-      --shadow-sm: 0 4px 16px rgba(12, 20, 36, 0.08);
-      --shadow-md: 0 12px 32px rgba(12, 20, 36, 0.12);
-      --shadow-lg: 0 20px 48px rgba(26, 58, 132, 0.2);
-      --font-serif-display: 'Cormorant Garamond', serif;
-      --font-serif-headings: 'Cinzel', serif;
-      --font-sans: 'DM Sans', sans-serif;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: var(--font-sans);
-      color: var(--text-dark);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* TYPOGRAPHY */
-    h1, h2, h3, h4, h5, h6 {
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 16px;
-    }
-
-    h1 { font-size: 64px; font-family: var(--font-serif-display); }
-    h2 { font-size: 52px; font-family: var(--font-serif-display); }
-    h3 { font-size: 28px; font-family: var(--font-serif-headings); }
-
-    p {
-      font-size: 16px;
-      line-height: 1.8;
-      color: var(--text-light);
-    }
-
-    em { font-style: italic; }
-
-    .section-label {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 16px;
-    }
-
-    /* NAVIGATION */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 40px;
-      background: transparent;
-      z-index: 1000;
-      transition: all 0.3s ease;
-    }
-
-    nav.scrolled {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-      padding: 16px 40px;
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-family: var(--font-serif-display);
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--text-dark);
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-
-    .nav-logo img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-    }
-
-    .nav-logo span {
-      color: var(--gold);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--text-dark);
-      text-decoration: none;
-      transition: all 0.3s;
-      position: relative;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--gold);
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--gold);
-      transition: width 0.3s;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .nav-cta {
-      padding: 12px 24px;
-      background: linear-gradient(135deg, var(--gold) 0%, var(--rose) 100%);
-      color: #fff;
-      font-weight: 700;
-      font-size: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(200, 136, 12, 0.25);
-      transition: all 0.3s;
-    }
-
-    .nav-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(200, 136, 12, 0.35);
-    }
-
-    @media (max-width: 1024px) {
-      nav { padding: 16px 24px; }
-      .nav-links { gap: 20px; }
-    }
-
-    @media (max-width: 560px) {
-      nav { padding: 14px 16px; }
-      .nav-logo { font-size: 14px; gap: 8px; }
-      .nav-logo img { width: 32px; height: 32px; }
-      .nav-links { gap: 12px; }
-      .nav-links a { font-size: 12px; }
-      .nav-cta { padding: 10px 16px; font-size: 10px; }
-    }
-
-    /* ANIMATIONS */
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .reveal {
-      animation: fadeUp 0.8s ease forwards;
-      opacity: 0;
-    }
-
-    /* PAGE HERO */
-    .page-hero {
-      background: linear-gradient(135deg, #1A3A84 0%, #6120A0 100%);
-      color: #fff;
-      padding: 120px 24px;
-      text-align: center;
-      margin-top: 80px;
-      position: relative;
-    }
-
-    .page-hero .container {
-      max-width: 800px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .page-hero h1 {
-      color: #fff;
-      margin-bottom: 24px;
-      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-    }
-
-    .page-hero p {
-      font-size: 18px;
-      color: rgba(255, 255, 255, 0.95);
-      margin-bottom: 16px;
-    }
-
-    .page-hero .section-label {
-      color: var(--gold);
-    }
-
-    .resource-banner {
-      margin-top: 40px;
-      padding-top: 32px;
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .resource-banner p {
-      font-size: 16px;
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 20px;
-    }
-
-    /* RESOURCES SECTION */
-    .resources-list {
-      padding: 100px 24px;
-      background: #fff;
-    }
-
-    .resource-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-    }
-
-    /* RESOURCE CARD */
-    .resource-card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 40px 32px;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      border: 2px solid transparent;
-    }
-
-    .resource-card:hover {
-      transform: translateY(-12px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--gold);
-    }
-
-    .resource-icon {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(135deg, var(--blue) 0%, var(--violet) 100%);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 24px;
-      color: #fff;
-    }
-
-    .resource-icon svg {
-      width: 40px;
-      height: 40px;
-      stroke: currentColor;
-      fill: none;
-    }
-
-    .resource-title {
-      font-family: var(--font-serif-headings);
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 16px;
-    }
-
-    .resource-desc {
-      font-size: 15px;
-      color: var(--text-light);
-      line-height: 1.6;
-      margin-bottom: 24px;
-      flex: 1;
-    }
-
-    .resource-action {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 24px;
-      background: linear-gradient(135deg, var(--gold) 0%, var(--rose) 100%);
-      color: #fff;
-      font-weight: 700;
-      font-size: 13px;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: all 0.3s;
-      align-self: center;
-    }
-
-    .resource-action:hover {
-      transform: translateX(4px);
-      box-shadow: 0 8px 20px rgba(200, 136, 12, 0.3);
-    }
-
-    .resource-action svg {
-      width: 16px;
-      height: 16px;
-      stroke: #fff;
-      stroke-width: 2;
-      fill: none;
-    }
-
-    /* CTA SECTION */
-    .cta-section {
-      background: linear-gradient(135deg, var(--text-dark) 0%, var(--blue) 100%);
-      color: #fff;
-      padding: 80px 24px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .cta-section h2 {
-      color: #fff;
-      font-size: 40px;
-      margin-bottom: 20px;
-    }
-
-    .cta-section p {
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 20px;
-    }
-
-    .cta-section a {
-      display: inline-block;
-      padding: 16px 36px;
-      background: linear-gradient(135deg, var(--gold) 0%, var(--rose) 100%);
-      color: #fff;
-      font-weight: 700;
-      font-size: 13px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 8px 24px rgba(200, 136, 12, 0.3);
-      transition: all 0.3s;
-    }
-
-    .cta-section a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 32px rgba(200, 136, 12, 0.4);
-    }
-
-    /* FOOTER */
-    .footer {
-      background: var(--text-dark);
-      color: #fff;
-    }
-
-    .footer-top {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 40px;
-      padding: 60px 24px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .footer a {
-      color: rgba(255, 255, 255, 0.7);
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-
-    .footer a:hover {
-      color: var(--gold);
-    }
-
-    .footer-bottom {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 24px;
-      text-align: center;
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.6);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .footer-copy {
-      margin: 0;
-      flex: 1;
-    }
-
-    .footer-legal {
-      display: flex;
-      gap: 24px;
-    }
-
-    @media (max-width: 860px) {
-      .footer-top { grid-template-columns: repeat(2, 1fr); }
-      .cta-section { grid-template-columns: 1fr; gap: 40px; }
-    }
-
-    @media (max-width: 560px) {
-      .page-hero { padding: 80px 24px; margin-top: 60px; }
-      h1 { font-size: 40px; }
-      h2 { font-size: 32px; }
-      .resources-list { padding: 60px 24px; }
-      .resource-list { grid-template-columns: 1fr; }
-      .footer-top { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-      .footer-legal { justify-content: center; }
-      .cta-section { padding: 60px 24px; }
-      .cta-section h2 { font-size: 28px; }
-    }
-
-    /* FOOTER DETAILS */
-    .footer-logo {
-      font-family: var(--font-serif-display);
-      font-size: 16px;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 12px;
-    }
-
-    .footer-logo span {
-      color: var(--gold);
-    }
-
-    .footer-tagline {
-      font-size: 12px;
-      color: rgba(255, 255, 255, 0.6);
-      font-style: italic;
-      margin-bottom: 0;
-    }
-
-    .footer-col-title {
-      font-family: var(--font-serif-headings);
-      font-size: 14px;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 16px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .footer-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .footer-links li {
-      margin: 0;
-    }
-
-    .footer-links a {
-      font-size: 13px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources &amp; Tools | Pastor Naklee Quamele Ministry</title>
+  <meta name="description" content="Discover ministry resources from Pastor Naklee Quamele including devotional guides, sermon archives, study workbooks, and prayer support." />
+  <link rel="icon" href="https://i.ibb.co/KcW3Wb64/709507763-4282957501850639-8538408039101713939-n.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Resources & Tools | Pastor Naklee Quamele Ministry" />
+  <meta property="og:description" content="Devotional guides, sermon archives, study workbooks, and prayer support to deepen your walk with God." />
+  <meta property="og:image" content="https://i.ibb.co/KcW3Wb64/709507763-4282957501850639-8538408039101713939-n.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Cinzel:wght@400;600;700;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<nav>
-  <a href="index.html" class="nav-logo">
-    <img src="https://i.ibb.co/KcW3Wb64/709507763-4282957501850639-8538408039101713939-n.jpg" alt="Naklee Quamele logo" width="38" height="38" />
-    Pastor Naklee <span>Quamele</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="sermons.html">Sermons</a></li>
-    <li><a href="training.html">Training</a></li>
-    <li><a href="resources.html" class="active">Resources</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <a href="contact.html" class="nav-cta">Connect</a>
-</nav>
-<section class="page-hero">
-  <div class="container">
-    <span class="section-label">Ministry Resources</span>
-    <h1>Grow in Faith with <em>Carefully Crafted Resources</em></h1>
-    <p>Access devotional guides, sermon archives, study workbooks, and prayer support tools designed to deepen your walk with God and strengthen your local church.</p>
-    <div class="resource-banner">
-      <p>Whether you are reading alone, preparing for a small group, or leading your congregation, these resources are made to help you study Scripture more intentionally, pray more faithfully, and remain connected to the heart of the Gospel.</p>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="nav-drawer" id="navDrawer">
+    <ul class="nav-drawer-links">
+      <li><a href="index.html" class="drawer-link">Home</a></li>
+      <li><a href="about.html" class="drawer-link">About</a></li>
+      <li><a href="sermons.html" class="drawer-link">Sermons</a></li>
+      <li><a href="training.html" class="drawer-link">Training</a></li>
+      <li><a href="resources.html" class="drawer-link">Resources</a></li>
+      <li><a href="contact.html" class="drawer-link">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-drawer-cta drawer-link">Connect with Ministry</a>
+  </div>
+
+  <nav id="mainNav">
+    <a href="index.html" class="nav-logo">
+      <img src="https://i.ibb.co/KcW3Wb64/709507763-4282957501850639-8538408039101713939-n.jpg" alt="Naklee Quamele logo" />
+      Pastor Naklee <span>Quamele · Liberia</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="sermons.html">Sermons</a></li>
+      <li><a href="training.html">Training</a></li>
+      <li><a href="resources.html" class="active">Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Connect</a>
+    <button id="hamburgerBtn" class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero interior">
+    <div class="hero-blob blob-2"></div>
+    <div class="hero-blob blob-4"></div>
+    <div class="hero-inner">
+      <span class="section-label light">Ministry Resources</span>
+      <h1>Grow in Faith with <em>Carefully Crafted Resources</em></h1>
+      <p>Access devotional guides, sermon archives, study workbooks, and prayer support tools designed to deepen your walk with God and strengthen your local church.</p>
+      <p class="hero-sub">Whether you are reading alone, preparing for a small group, or leading your congregation, these resources help you study Scripture more intentionally and pray more faithfully.</p>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section id="available-resources">
+    <div class="container">
+      <div class="section-head center">
+        <span class="section-label">Available Resources</span>
+        <h2 class="section-title">Tools to Help You <em>Grow</em></h2>
+      </div>
+      <div class="card-grid">
+        <article class="feature-card reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M4 8h16"/></svg></div>
+          <h3 class="feature-title">Daily Devotional Guide</h3>
+          <p class="feature-desc">A 30-day devotional companion that helps believers begin every morning with Scripture, prayer, and reflection. Great for personal quiet time or small groups.</p>
+          <a href="#" class="sermon-link" style="align-self:center; margin-top:20px;">Download Guide<svg viewBox="0 0 24 24"><path d="M12 5v11"/><path d="M8 12l4 4 4-4"/></svg></a>
+        </article>
+        <article class="feature-card reveal delay-1">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 17V7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3Z"/><path d="M8 7h8M8 12h8M8 16h8"/></svg></div>
+          <h3 class="feature-title">Sermon Archive</h3>
+          <p class="feature-desc">Stream and revisit past sermons, teachings, and conference messages. Study topics like faith, prayer, discipleship, and God's purposes.</p>
+          <a href="sermons.html" class="sermon-link" style="align-self:center; margin-top:20px;">Browse Messages<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </article>
+        <article class="feature-card reveal delay-2">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M7 4h10v16H7z"/><path d="M10 8h4"/></svg></div>
+          <h3 class="feature-title">Study Workbooks</h3>
+          <p class="feature-desc">Companion workbooks for discipleship programs and Scripture studies. Each workbook includes questions, reflection prompts, and practical applications.</p>
+          <a href="#" class="sermon-link" style="align-self:center; margin-top:20px;">View Workbooks<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </article>
+        <article class="feature-card reveal delay-3">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 4a7 7 0 0 0-7 7c0 6 7 9 7 9s7-3 7-9a7 7 0 0 0-7-7Z"/><path d="M12 11.5v4"/><path d="M12 7.5h.01"/></svg></div>
+          <h3 class="feature-title">Prayer Request Support</h3>
+          <p class="feature-desc">Submit your prayer requests and receive loving support from the ministry team. We pray with you and stand alongside you through every season.</p>
+          <a href="mailto:info@nakleequamele.com" class="sermon-link" style="align-self:center; margin-top:20px;">Send a Request<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="contact-cta">
+    <div class="container cta-panel">
+      <div class="reveal">
+        <h2>Receive New Resources First</h2>
+        <p>Subscribe to hear when new devotionals, study guides, and ministry tools are released. Stay connected to the teachings and encouragement of Pastor Naklee.</p>
+        <a href="mailto:info@nakleequamele.com" class="btn-ghost on-dark">Join the Mailing List</a>
+      </div>
+      <div class="reveal delay-1" style="color:rgba(255,255,255,0.92)">
+        <p style="font-size:16px; line-height:1.8;">If you need prayer, a ministry visit, or group training resources, please reach out and we will connect you with the right support.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-top">
       <div>
-        <a href="#available-resources" class="nav-cta">View Resources</a>
+        <div class="footer-logo">Pastor Naklee <span>Quamele</span></div>
+        <p class="footer-tagline">"Preaching the Gospel · Raising a Generation After God's Heart"</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="social-link" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.26 2.2.43.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.17.4.37 1 .43 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.26 1.8-.43 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.17-1 .37-2.2.43-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-1.8-.26-2.2-.43-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.17-.4-.37-1-.43-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.26-1.8.43-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.17 1-.37 2.2-.43C8.4 2.2 8.8 2.2 12 2.2zm0 3.4A6.4 6.4 0 1 0 18.4 12 6.4 6.4 0 0 0 12 5.6zm0 10.6A4.2 4.2 0 1 1 16.2 12 4.2 4.2 0 0 1 12 16.2zm6.6-10.9a1.5 1.5 0 1 0 1.5 1.5 1.5 1.5 0 0 0-1.5-1.5z"/></svg></a>
+          <a href="#" class="social-link" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.02V8.98L15.5 12z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Ministry</div>
+        <ul class="footer-links">
+          <li><a href="about.html">About Pastor Naklee</a></li>
+          <li><a href="sermons.html">Sermons &amp; Teachings</a></li>
+          <li><a href="training.html">Discipleship Training</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <ul class="footer-links">
+          <li><a href="#available-resources">Daily Devotional</a></li>
+          <li><a href="sermons.html">Sermon Archive</a></li>
+          <li><a href="#available-resources">Study Workbooks</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Connect</div>
+        <ul class="footer-links">
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:info@nakleequamele.com">info@nakleequamele.com</a></li>
+          <li><a href="tel:+2310770000000">+231 (0) 770 000 000</a></li>
+        </ul>
       </div>
     </div>
-  </div>
-</section>
-<section class="resources-list" id="available-resources">
-  <div class="container resource-list">
-    <article class="resource-card">
-      <div class="resource-icon">
-        <svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M4 8h16" stroke="currentColor" stroke-width="1.8"/></svg>
-      </div>
-      <h2 class="resource-title">Daily Devotional Guide</h2>
-      <p class="resource-desc">A 30-day devotional companion that helps believers begin every morning with Scripture, prayer, and reflection. Great for personal quiet time or small groups.</p>
-      <a href="#" class="resource-action">Download Guide <svg viewBox="0 0 24 24"><path d="M12 5v11"/><path d="M8 12l4 4 4-4"/><path d="M6 19h12"/></svg></a>
-    </article>
-    <article class="resource-card">
-      <div class="resource-icon">
-        <svg viewBox="0 0 24 24"><path d="M4 17V7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3Z" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M8 7h8M8 12h8M8 16h8" stroke="currentColor" stroke-width="1.8"/></svg>
-      </div>
-      <h2 class="resource-title">Sermon Archive</h2>
-      <p class="resource-desc">Stream and revisit past sermons, teachings, and conference messages from Pastor Naklee. Use this archive to study topics like faith, prayer, discipleship, and God's purposes.</p>
-      <a href="sermons.html" class="resource-action">Browse Messages <svg viewBox="0 0 24 24"><path d="M10 6l6 6-6 6"/></svg></a>
-    </article>
-    <article class="resource-card">
-      <div class="resource-icon">
-        <svg viewBox="0 0 24 24"><path d="M7 4h10v16H7z" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M10 8h4" stroke="currentColor" stroke-width="1.8"/></svg>
-      </div>
-      <h2 class="resource-title">Study Workbooks</h2>
-      <p class="resource-desc">Companion workbooks for discipleship programs and Scripture studies. Each workbook includes questions, reflection prompts, and practical applications.</p>
-      <a href="#" class="resource-action">View Workbooks <svg viewBox="0 0 24 24"><path d="M10 6l6 6-6 6"/></svg></a>
-    </article>
-    <article class="resource-card">
-      <div class="resource-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 4a7 7 0 0 0-7 7c0 6 7 9 7 9s7-3 7-9a7 7 0 0 0-7-7Z" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 11.5v4" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5h.01" stroke="currentColor" stroke-width="2"/></svg>
-      </div>
-      <h2 class="resource-title">Prayer Request Support</h2>
-      <p class="resource-desc">Submit your prayer requests and receive loving support from the ministry team. We pray with you and stand alongside you through every season.</p>
-      <a href="mailto:info@nakleequamele.com" class="resource-action">Send a Request <svg viewBox="0 0 24 24"><path d="M10 6l6 6-6 6"/></svg></a>
-    </article>
-  </div>
-</section>
-<section class="cta-section">
-  <div>
-    <h2>Receive New Resources First</h2>
-    <p>Subscribe to receive updates when new devotionals, study guides, and ministry tools are released. Stay connected to the teachings and encouragement of Pastor Naklee.</p>
-    <a href="mailto:info@nakleequamele.com">Join the Mailing List</a>
-  </div>
-  <div>
-    <p style="font-size:0.96rem; color:rgba(255,255,255,0.92);">If you need prayer, a ministry visit, or group training resources, please reach out and we will connect you with the right support.</p>
-  </div>
-</section>
-<footer class="footer">
-  <div class="container footer-top">
-    <div>
-      <div class="footer-logo">Pastor Naklee <span>Quamele</span></div>
-      <p class="footer-tagline">"Preaching the Gospel · Raising a Generation After God's Heart"</p>
+    <div class="footer-bottom">
+      <p class="footer-copy">Copyright © 2026 Pastor Naklee Quamele Ministry · Monrovia, Liberia. All rights reserved.</p>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
     </div>
-    <div>
-      <div class="footer-col-title">Ministry</div>
-      <ul class="footer-links">
-        <li><a href="about.html">About Pastor Naklee</a></li>
-        <li><a href="sermons.html">Sermons & Teachings</a></li>
-        <li><a href="training.html">Discipleship Training</a></li>
-        <li><a href="resources.html">Resources</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-col-title">Resources</div>
-      <ul class="footer-links">
-        <li><a href="#available-resources">Daily Devotional</a></li>
-        <li><a href="sermons.html">Sermon Archive</a></li>
-        <li><a href="#available-resources">Study Workbooks</a></li>
-        <li><a href="mailto:info@nakleequamele.com">Prayer Request</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-col-title">Connect</div>
-      <ul class="footer-links">
-        <li><a href="contact.html">Invite to Speak</a></li>
-        <li><a href="contact.html">Join Training</a></li>
-        <li><a href="mailto:info@nakleequamele.com">info@nakleequamele.com</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p class="footer-copy">Copyright © 2026 Pastor Naklee Quamele Ministry · Monrovia, Liberia. All rights reserved.</p>
-    <div class="footer-legal">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Use</a>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<script>
-  // Navigation scroll effect
-  const nav = document.querySelector('nav');
-  const navLinks = document.querySelectorAll('.nav-links a');
-
-  function handleNavScroll() {
-    if (window.scrollY > 60) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  }
-
-  window.addEventListener('scroll', handleNavScroll);
-
-  // Smooth link scrolling for hash links
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href.startsWith('#')) {
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    });
-  });
-
-  // Reveal animations on scroll
-  const revealObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('reveal');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-  });
-
-  // Observe all elements that should reveal
-  document.querySelectorAll('.resource-card, .cta-section').forEach(el => {
-    el.classList.remove('reveal');
-    revealObserver.observe(el);
-  });
-</script>
+  <script src="main.js"></script>
 </body>
 </html>
