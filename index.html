@@ -1,0 +1,2227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pastor Naklee Quamele | Gospel Preacher & Ministry — Liberia</title>
+  <meta name="description" content="Pastor Naklee Quamele is a passionate gospel preacher, teacher, and trainer from Liberia. Discover her sermons, discipleship training programs, and ministry resources." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Cinzel:wght@400;600;700;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --blue: #1A3A84;
+      --blue-light: #e8f0ff;
+      --gold: #C8880C;
+      --gold-light: #FFF5E6;
+      --teal: #0A7A68;
+      --teal-light: #E0F5F2;
+      --violet: #6120A0;
+      --violet-light: #f5e8ff;
+      --rose: #C82050;
+      --rose-light: #FFE8F1;
+      --text-dark: #0C1424;
+      --text-body: #3d4a62;
+      --gray-light: #f7f8fb;
+      --gray-lighter: #f0f2f7;
+      --border: #e0e4eb;
+      --shadow-sm: 0 2px 8px rgba(12, 20, 36, 0.08);
+      --shadow-md: 0 8px 24px rgba(12, 20, 36, 0.12);
+      --shadow-lg: 0 16px 48px rgba(12, 20, 36, 0.16);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-serif-display: "Cormorant Garamond", serif;
+      --font-serif-headings: "Cinzel", serif;
+      --font-sans: "DM Sans", sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-body);
+      background: #fff;
+      line-height: 1.6;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    button {
+      font-family: var(--font-sans);
+      border: none;
+      background: none;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes blobDrift1 {
+      0% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(30px, -40px) scale(1.1); }
+      50% { transform: translate(-20px, 30px) scale(0.95); }
+      75% { transform: translate(40px, 20px) scale(1.05); }
+      100% { transform: translate(0, 0) scale(1); }
+    }
+
+    @keyframes blobDrift2 {
+      0% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(-35px, 45px) scale(1.05); }
+      50% { transform: translate(25px, -30px) scale(1.1); }
+      75% { transform: translate(-30px, -20px) scale(0.95); }
+      100% { transform: translate(0, 0) scale(1); }
+    }
+
+    @keyframes blobDrift3 {
+      0% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(40px, 20px) scale(0.95); }
+      50% { transform: translate(-30px, -35px) scale(1.1); }
+      75% { transform: translate(20px, 40px) scale(1.05); }
+      100% { transform: translate(0, 0) scale(1); }
+    }
+
+    @keyframes blobDrift4 {
+      0% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(-40px, -25px) scale(1.1); }
+      50% { transform: translate(35px, 35px) scale(0.95); }
+      75% { transform: translate(-25px, 30px) scale(1.05); }
+      100% { transform: translate(0, 0) scale(1); }
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { transform: translateY(0); opacity: 0.3; }
+      50% { transform: translateY(10px); opacity: 1; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes countUp {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .reveal {
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .reveal-left {
+      opacity: 0;
+      animation: slideUp 0.8s ease forwards;
+      animation-direction: reverse;
+    }
+
+    .reveal-right {
+      opacity: 0;
+      animation: slideUp 0.8s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+    .delay-5 { animation-delay: 0.5s; }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 36px;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--violet) 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 1px;
+      border-radius: 8px;
+      box-shadow: 0 12px 32px rgba(26, 58, 132, 0.35);
+      transition: var(--transition);
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      transition: left 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(26, 58, 132, 0.5);
+    }
+
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 36px;
+      background: transparent;
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 1px;
+      border: 2px solid var(--blue);
+      border-radius: 8px;
+      transition: var(--transition);
+      text-transform: uppercase;
+    }
+
+    .btn-ghost:hover {
+      background: var(--blue);
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(26, 58, 132, 0.3);
+    }
+
+    /* CURSOR */
+    .cursor-dot,
+    .cursor-ring {
+      position: fixed;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .cursor-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--blue);
+      border-radius: 50%;
+      transform: translate(-4px, -4px);
+    }
+
+    .cursor-ring {
+      width: 40px;
+      height: 40px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      transform: translate(-20px, -20px);
+      opacity: 0.5;
+    }
+
+    /* NAVIGATION */
+    #mainNav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+      border-bottom: 1px solid transparent;
+    }
+
+    #mainNav.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: var(--shadow-sm);
+      border-bottom-color: var(--border);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-serif-display);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-dark);
+      letter-spacing: -0.5px;
+    }
+
+    .nav-logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+    }
+
+    .nav-logo span {
+      font-size: 14px;
+      color: var(--text-body);
+      font-weight: 400;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-body);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--gold));
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 10px 20px;
+      background: linear-gradient(135deg, var(--blue), var(--violet));
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(26, 58, 132, 0.3);
+    }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: var(--text-dark);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    .nav-hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(10px, 10px);
+    }
+
+    .nav-hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .nav-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 99;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+      display: block;
+    }
+
+    .nav-drawer {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      max-width: 320px;
+      height: 100vh;
+      background: #fff;
+      z-index: 101;
+      padding: 80px 24px 24px;
+      transition: right 0.3s ease;
+      box-shadow: -4px 0 16px rgba(0, 0, 0, 0.1);
+      overflow-y: auto;
+    }
+
+    .nav-drawer.active {
+      right: 0;
+    }
+
+    .nav-drawer-links {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .nav-drawer-links li {
+      margin-bottom: 12px;
+    }
+
+    .drawer-link {
+      display: block;
+      padding: 12px 0;
+      color: var(--text-dark);
+      font-weight: 500;
+      font-size: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .drawer-link:hover {
+      color: var(--blue);
+    }
+
+    .nav-drawer-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, var(--blue), var(--violet));
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: 8px;
+      margin-top: 24px;
+      border: none;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* HERO SECTION */
+    .page-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 24px 80px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .hero-blob {
+      position: absolute;
+      border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+      filter: blur(40px);
+      opacity: 0.15;
+      z-index: 0;
+    }
+
+    .hero-blob.blob-1 {
+      width: 300px;
+      height: 300px;
+      background: rgba(200, 136, 12, 0.3);
+      top: 10%;
+      left: 5%;
+      animation: blobDrift1 15s ease-in-out infinite;
+    }
+
+    .hero-blob.blob-2 {
+      width: 350px;
+      height: 350px;
+      background: rgba(26, 58, 132, 0.2);
+      top: 50%;
+      right: 5%;
+      animation: blobDrift2 18s ease-in-out infinite;
+    }
+
+    .hero-blob.blob-3 {
+      width: 250px;
+      height: 250px;
+      background: rgba(97, 32, 160, 0.25);
+      bottom: 10%;
+      left: 20%;
+      animation: blobDrift3 12s ease-in-out infinite;
+    }
+
+    .hero-blob.blob-4 {
+      width: 280px;
+      height: 280px;
+      background: rgba(10, 122, 104, 0.2);
+      top: 20%;
+      left: 50%;
+      animation: blobDrift4 16s ease-in-out infinite;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 750px;
+      animation: fadeUp 0.8s ease 0.2s backwards;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(12px);
+      padding: 70px 50px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-eyebrow-line {
+      display: flex;
+      width: 20px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    .hero-eyebrow-line:last-child {
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+
+    .hero-title {
+      font-family: var(--font-serif-display);
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-name-italic {
+      font-style: italic;
+      color: var(--gold);
+      text-shadow: 0 2px 8px rgba(200, 136, 12, 0.4);
+    }
+
+    .hero-tagline {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 40px;
+      font-weight: 400;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--text-body);
+      text-transform: uppercase;
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    .hero-bg-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      opacity: 1;
+    }
+
+    /* VERSE BANNER */
+    .verse-banner {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--violet) 100%);
+      color: #fff;
+      padding: 60px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .verse-banner::before {
+      content: '"';
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 120px;
+      font-family: var(--font-serif-display);
+      opacity: 0.1;
+      line-height: 1;
+    }
+
+    .verse-text {
+      font-size: 24px;
+      font-family: var(--font-serif-display);
+      font-weight: 500;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .verse-ref {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding-top: 12px;
+      border-top: 2px solid rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* SECTION STYLES */
+    section {
+      padding: 100px 24px;
+      position: relative;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif-display);
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--text-dark);
+      margin-bottom: 24px;
+      max-width: 600px;
+      letter-spacing: -1px;
+    }
+
+    .section-title em {
+      font-style: italic;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--rose) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section-body {
+      font-size: 16px;
+      color: var(--text-body);
+      line-height: 1.8;
+      margin-bottom: 32px;
+      max-width: 600px;
+    }
+
+    /* ABOUT SECTION */
+    .about {
+      background: var(--gray-light);
+    }
+
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-image-frame {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 16px;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--violet) 100%);
+      box-shadow: 0 20px 60px rgba(26, 58, 132, 0.3);
+    }
+
+    .about-portrait {
+      width: 90%;
+      height: 90%;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 8px solid #fff;
+    }
+
+    .about-monogram {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.95);
+      border: 3px solid var(--gold);
+      border-radius: 50%;
+      font-family: var(--font-serif-headings);
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--blue);
+      box-shadow: var(--shadow-md);
+    }
+
+    .about-content .btn-ghost {
+      margin-top: 24px;
+    }
+
+    /* SERMONS SECTION */
+    .sermons {
+      background: #fff;
+    }
+
+    .sermons-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 60px;
+    }
+
+    .sermons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+    }
+
+    .sermon-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(12, 20, 36, 0.08);
+      transition: var(--transition);
+      position: relative;
+      border: 1px solid var(--border);
+    }
+
+    .sermon-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 48px rgba(12, 20, 36, 0.15);
+      border-color: var(--gold);
+    }
+
+    .sermon-image {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .sermon-card:nth-child(2) .sermon-image {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--rose) 100%);
+    }
+
+    .sermon-card:nth-child(3) .sermon-image {
+      background: linear-gradient(135deg, var(--violet) 0%, var(--blue) 100%);
+    }
+
+    .sermon-play {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.3);
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+    }
+
+    .sermon-play:hover {
+      background: rgba(255, 255, 255, 0.5);
+      transform: scale(1.1);
+    }
+
+    .sermon-play::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 12px solid #fff;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      margin-left: 3px;
+    }
+
+    .sermon-content {
+      padding: 24px;
+    }
+
+    .sermon-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--blue);
+      background: var(--blue-light);
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .sermon-title {
+      font-family: var(--font-serif-headings);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .sermon-duration {
+      font-size: 12px;
+      color: var(--text-body);
+      opacity: 0.7;
+    }
+
+    .sermon-thumb {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+      overflow: hidden;
+    }
+
+    .sermon-card:nth-child(2) .sermon-thumb {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--rose) 100%);
+    }
+
+    .sermon-card:nth-child(3) .sermon-thumb {
+      background: linear-gradient(135deg, var(--violet) 0%, var(--blue) 100%);
+    }
+
+    .sermon-thumb-overlay {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sermon-body {
+      padding: 24px;
+    }
+
+    .sermon-date {
+      font-size: 12px;
+      color: var(--text-body);
+      opacity: 0.6;
+      margin-bottom: 8px;
+    }
+
+    .sermon-title {
+      font-family: var(--font-serif-headings);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .sermon-excerpt {
+      font-size: 14px;
+      color: var(--text-body);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .sermon-link {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid transparent;
+      transition: var(--transition);
+    }
+
+    .sermon-link:hover {
+      border-bottom-color: var(--blue);
+    }
+
+    /* RESOURCES LIST */
+    .resource-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, var(--blue), var(--violet));
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: 8px;
+      transition: var(--transition);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 20px;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(26, 58, 132, 0.3);
+    }
+
+    /* CONTACT CTA */
+    .contact-cta {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--violet) 100%);
+      color: #fff;
+      padding: 80px 24px;
+    }
+
+    .cta-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .cta-panel h2 {
+      font-family: var(--font-serif-display);
+      font-size: 42px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .cta-panel p {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--text-dark);
+      color: #fff;
+      padding-bottom: 0;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      padding: 60px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-logo {
+      font-family: var(--font-serif-display);
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--gold);
+    }
+
+    .footer-tagline {
+      font-size: 14px;
+      line-height: 1.6;
+      opacity: 0.8;
+    }
+
+    .footer-col-title {
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+      padding-left: 8px;
+    }
+
+    .footer-bottom {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .footer-copy {
+      flex: 1;
+      margin: 0;
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-legal a {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      transition: var(--transition);
+    }
+
+    .footer-legal a:hover {
+      color: var(--gold);
+    }
+
+    @media (max-width: 1024px) {
+      .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cta-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .resource-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .cta-panel {
+        gap: 40px;
+      }
+
+      .cta-panel h2 {
+        font-size: 28px;
+      }
+    }
+
+    /* TRAINING SECTION */
+    .training {
+      background: var(--gray-light);
+    }
+
+    .training-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .training-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 40px 32px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(12, 20, 36, 0.08);
+      transition: var(--transition);
+      border: 2px solid transparent;
+    }
+
+    .training-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 48px rgba(12, 20, 36, 0.15);
+      border-color: var(--gold);
+    }
+
+    .training-icon {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--blue-light);
+      border-radius: 50%;
+      margin: 0 auto 24px;
+      font-size: 40px;
+      transition: var(--transition);
+    }
+
+    .training-card:hover .training-icon {
+      background: var(--gold-light);
+      transform: scale(1.1);
+    }
+
+    .training-title {
+      font-family: var(--font-serif-headings);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+
+    .training-desc {
+      font-size: 14px;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
+
+    /* TESTIMONIALS SECTION */
+    .testimonials {
+      background: linear-gradient(135deg, var(--text-dark) 0%, var(--blue) 100%);
+      color: #fff;
+    }
+
+    .testimonials .section-label {
+      color: var(--gold);
+    }
+
+    .testimonials .section-title {
+      color: #fff;
+    }
+
+    .testimonials .section-title em {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--rose) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 12px;
+      padding: 40px;
+      transition: var(--transition);
+    }
+
+    .testimonial-card:hover {
+      background: rgba(255, 255, 255, 0.18);
+      transform: translateY(-12px);
+      border-color: var(--gold);
+    }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: var(--gold);
+    }
+
+    .testimonial-text {
+      font-size: 16px;
+      font-style: italic;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      opacity: 0.95;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testimonial-avatar {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--gold), var(--rose));
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .testimonial-details h4 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .testimonial-details p {
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+    /* RESOURCES SECTION */
+    .resources {
+      background: #fff;
+    }
+
+    .resources-inner {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .resources-list {
+      list-style: none;
+      margin-top: 40px;
+    }
+
+    .resource-item {
+      padding: 24px;
+      border-left: 4px solid transparent;
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .resource-item:hover {
+      background: var(--gray-light);
+      padding-left: 28px;
+      border-left-color: var(--blue);
+    }
+
+    .resource-title {
+      font-family: var(--font-serif-headings);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+
+    .resource-desc {
+      font-size: 14px;
+      color: var(--text-body);
+      opacity: 0.8;
+    }
+
+    .newsletter-box {
+      background: var(--blue-light);
+      border-radius: 12px;
+      padding: 32px 24px;
+      text-align: center;
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .newsletter-box h3 {
+      font-family: var(--font-serif-headings);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+
+    .newsletter-box p {
+      font-size: 14px;
+      color: var(--text-body);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .newsletter-form input {
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      transition: var(--transition);
+    }
+
+    .newsletter-form input:focus {
+      outline: none;
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px var(--blue-light);
+    }
+
+    .newsletter-form button {
+      padding: 14px 24px;
+      background: linear-gradient(135deg, var(--blue), var(--violet));
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+      border-radius: 6px;
+      transition: var(--transition);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(26, 58, 132, 0.2);
+    }
+
+    .newsletter-form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(26, 58, 132, 0.35);
+    }
+
+    /* CONTACT SECTION */
+    .contact {
+      background: var(--gray-light);
+    }
+
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .contact-card {
+      display: flex;
+      gap: 16px;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .contact-card:hover {
+      background: #fff;
+      box-shadow: 0 8px 24px rgba(12, 20, 36, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .contact-icon {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--blue), var(--violet));
+      color: #fff;
+      border-radius: 12px;
+      font-size: 28px;
+      flex-shrink: 0;
+      box-shadow: 0 8px 20px rgba(26, 58, 132, 0.25);
+    }
+
+    .contact-details h3 {
+      font-family: var(--font-serif-headings);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+
+    .contact-details p {
+      font-size: 14px;
+      color: var(--text-body);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: var(--text-body);
+      transition: var(--transition);
+      background: #fff;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--blue);
+      box-shadow: 0 0 0 4px rgba(26, 58, 132, 0.1);
+      background: rgba(26, 58, 132, 0.01);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+      font-family: var(--font-sans);
+    }
+
+    .form-submit {
+      padding: 16px 36px;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--violet) 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+      border-radius: 8px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 12px;
+      box-shadow: 0 8px 24px rgba(26, 58, 132, 0.3);
+    }
+
+    .form-submit:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(26, 58, 132, 0.4);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--text-dark);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      padding: 60px 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-column h4 {
+      font-family: var(--font-serif-display);
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: var(--gold);
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column li {
+      margin-bottom: 12px;
+    }
+
+    .footer-column a {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      transition: var(--transition);
+    }
+
+    .footer-column a:hover {
+      color: var(--gold);
+      padding-left: 8px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-serif-display);
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .footer-logo img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: var(--gold);
+      font-size: 18px;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      background: var(--gold);
+      color: var(--text-dark);
+      transform: translateY(-3px);
+    }
+
+    .footer-divider {
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      width: 120px;
+      height: 120px;
+      opacity: 0.05;
+      font-size: 200px;
+      transform: translateY(-50%);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 24px;
+      text-align: center;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .form-success-message {
+      display: none;
+      background: var(--teal-light);
+      border: 1px solid var(--teal);
+      border-radius: 8px;
+      padding: 16px;
+      color: var(--teal);
+      font-size: 14px;
+      margin-bottom: 20px;
+      animation: slideUp 0.3s ease;
+    }
+
+    .form-success-message.show {
+      display: block;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .nav-hamburger {
+        display: flex;
+      }
+
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+
+      .page-hero {
+        min-height: 80vh;
+      }
+
+      .hero-title {
+        font-size: 56px;
+      }
+
+      .hero-blob {
+        width: 200px;
+        height: 200px;
+      }
+
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .sermons-header {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .resources-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .newsletter-box {
+        position: static;
+      }
+
+      .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      section {
+        padding: 70px 24px;
+      }
+      section {
+        padding: 60px 24px;
+      }
+
+      .page-hero {
+        min-height: 70vh;
+        padding: 100px 24px 60px;
+      }
+
+      .hero-title {
+        font-size: 44px;
+      }
+
+      .section-title {
+        font-size: 36px;
+      }
+
+      .sermons-grid,
+      .training-grid,
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        padding: 40px 24px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .nav-logo {
+        font-size: 16px;
+        gap: 8px;
+      }
+
+      .nav-logo img {
+        width: 36px;
+        height: 36px;
+      }
+
+      .page-hero {
+        min-height: 60vh;
+        padding: 80px 16px 50px;
+      }
+
+      .hero-title {
+        font-size: 32px;
+      }
+
+      .hero-tagline {
+        font-size: 16px;
+      }
+
+      .hero-actions {
+        gap: 12px;
+      }
+
+      .btn-primary,
+      .btn-ghost {
+        padding: 12px 24px;
+        font-size: 13px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .section-body {
+        font-size: 15px;
+      }
+
+      .sermons-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .training-grid {
+        gap: 20px;
+      }
+
+      .training-card {
+        padding: 24px 16px;
+      }
+
+      .contact-inner {
+        gap: 40px;
+      }
+
+      .verse-text {
+        font-size: 18px;
+      }
+
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-video {
+        padding: 0;
+        border-radius: 12px;
+      }
+
+      .video-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* VIDEO SECTION */
+    .videos {
+      background: var(--gray-light);
+    }
+
+    .featured-video {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--violet) 100%);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(26, 58, 132, 0.2);
+      margin-bottom: 60px;
+    }
+
+    .featured-video iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      align-items: start;
+    }
+
+    .video-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(12, 20, 36, 0.08);
+      transition: var(--transition);
+      border: 1px solid var(--border);
+    }
+
+    .video-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 48px rgba(12, 20, 36, 0.15);
+      border-color: var(--gold);
+    }
+
+    .video-thumb {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .video-card:nth-child(2) .video-thumb {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--rose) 100%);
+    }
+
+    .video-card:nth-child(3) .video-thumb {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--blue) 100%);
+    }
+
+    .video-thumb::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .video-card:hover .video-thumb::before {
+      opacity: 1;
+    }
+
+    .play-button {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      z-index: 2;
+      transition: var(--transition);
+      box-shadow: 0 12px 32px rgba(200, 136, 12, 0.4);
+    }
+
+    .video-card:hover .play-button {
+      transform: scale(1.1);
+      box-shadow: 0 16px 48px rgba(200, 136, 12, 0.5);
+    }
+
+    .play-button svg {
+      width: 32px;
+      height: 32px;
+      fill: currentColor;
+    }
+
+    .video-body {
+      padding: 24px;
+    }
+
+    .video-date {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+
+    .video-title {
+      font-family: var(--font-serif-headings);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .video-excerpt {
+      font-size: 14px;
+      color: var(--text-body);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .video-link {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--blue);
+      position: relative;
+    }
+
+    .video-link::after {
+      content: '→';
+      margin-left: 8px;
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+
+    .video-card:hover .video-link::after {
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 768px) {
+      .featured-video {
+        margin-bottom: 40px;
+      }
+
+      .video-grid {
+        gap: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cursor helpers -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Mobile drawer + overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="nav-drawer" id="navDrawer">
+    <ul class="nav-drawer-links">
+      <li><a href="index.html" class="drawer-link">Home</a></li>
+      <li><a href="about.html" class="drawer-link">About</a></li>
+      <li><a href="sermons.html" class="drawer-link">Sermons</a></li>
+      <li><a href="training.html" class="drawer-link">Training</a></li>
+      <li><a href="resources.html" class="drawer-link">Resources</a></li>
+      <li><a href="contact.html" class="drawer-link">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-drawer-cta drawer-link">Connect with Ministry</a>
+  </div>
+
+  <!-- Top navigation -->
+  <nav id="mainNav">
+    <a href="index.html" class="nav-logo">
+      <img src="https://i.ibb.co/KcW3Wb64/709507763-4282957501850639-8538408039101713939-n.jpg" alt="Naklee Quamele logo">
+      Pastor Naklee <span>Quamele · Liberia</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="sermons.html">Sermons</a></li>
+      <li><a href="training.html">Training</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Connect</a>
+    <button id="hamburgerBtn" class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <img src="https://i.ibb.co/Qjdmb7pZ/Chat-GPT-Image-May-31-2026-12-44-52-PM.png" alt="Pastor Naklee hero" class="hero-bg-image">
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+    <div class="hero-blob blob-3"></div>
+    <div class="hero-blob blob-4"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow"><span class="hero-eyebrow-line"></span> Gospel Preacher &amp; Teacher · Liberia <span class="hero-eyebrow-line"></span></div>
+      <h1 class="hero-title">Pastor Naklee <span class="hero-name-italic">Quamele</span></h1>
+      <p class="hero-tagline">Preaching the Gospel · Raising a Generation After God's Heart</p>
+      <div class="hero-actions">
+        <a href="sermons.html" class="btn-primary">Watch Sermons</a>
+        <a href="about.html" class="btn-ghost">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-scroll">Scroll</div>
+  </section>
+
+  <!-- Verse banner -->
+  <div class="verse-banner">
+    <p class="verse-text">"Go into all the world and preach the gospel to every creature."</p>
+    <span class="verse-ref">Mark 16:15</span>
+  </div>
+
+  <!-- About preview -->
+  <section class="about" id="about">
+    <div class="container about-inner">
+      <div class="about-image-wrap">
+        <div class="about-image-frame">
+          <img class="about-portrait" src="https://i.ibb.co/m5h0fgX7/Chat-GPT-Image-May-31-2026-01-15-15-PM.png" alt="Pastor Naklee">
+          <div class="about-monogram">NQ</div>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="section-label">About the Minister</span>
+        <h2 class="section-title">Called to <em>Proclaim the Gospel</em></h2>
+        <p class="section-body">Pastor Naklee Quamele is a gospel preacher, teacher, and trainer from Monrovia, Liberia. Her ministry focuses on discipleship, leadership training, and equipping the local church.</p>
+        <a href="about.html" class="btn-ghost">Read Full Bio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sermons preview -->
+  <section class="sermons" id="sermons">
+    <div class="container">
+      <div class="sermons-header">
+        <div>
+          <span class="section-label">Messages &amp; Teachings</span>
+          <h2 class="section-title">Recent <em>Sermons</em></h2>
+        </div>
+        <a href="sermons.html" class="btn-ghost">View All</a>
+      </div>
+      <div class="sermons-grid">
+        <div class="sermon-card">
+          <div class="sermon-thumb"><div class="sermon-thumb-overlay"></div></div>
+          <div class="sermon-body">
+            <div class="sermon-date">May 18, 2025</div>
+            <div class="sermon-title">Walking in the Purpose of God</div>
+            <div class="sermon-excerpt">Discover how God's purpose for your life unfolds when you surrender fully to His call.</div>
+            <a href="#" class="sermon-link">Listen Now</a>
+          </div>
+        </div>
+        <div class="sermon-card">
+          <div class="sermon-thumb"><div class="sermon-thumb-overlay"></div></div>
+          <div class="sermon-body">
+            <div class="sermon-date">April 27, 2025</div>
+            <div class="sermon-title">The Power of a Praying Believer</div>
+            <div class="sermon-excerpt">Prayer is the lifeline of every Christian. Learn practical ways to pray with faith.</div>
+            <a href="#" class="sermon-link">Listen Now</a>
+          </div>
+        </div>
+        <div class="sermon-card">
+          <div class="sermon-thumb"><div class="sermon-thumb-overlay"></div></div>
+          <div class="sermon-body">
+            <div class="sermon-date">April 6, 2025</div>
+            <div class="sermon-title">Raising the Next Generation for God</div>
+            <div class="sermon-excerpt">Training a generation to carry the Gospel forward with passion and integrity.</div>
+            <a href="#" class="sermon-link">Listen Now</a>
+          </div>
+        </div>
+        <div class="sermon-card">
+          <div class="sermon-thumb"><div class="sermon-thumb-overlay"></div></div>
+          <div class="sermon-body">
+            <div class="sermon-date">March 23, 2025</div>
+            <div class="sermon-title">Grace Sufficient for Today</div>
+            <div class="sermon-excerpt">God's grace is new every morning and sufficient for all our needs and struggles.</div>
+            <a href="#" class="sermon-link">Listen Now</a>
+          </div>
+        </div>
+        <div class="sermon-card">
+          <div class="sermon-thumb"><div class="sermon-thumb-overlay"></div></div>
+          <div class="sermon-body">
+            <div class="sermon-date">March 9, 2025</div>
+            <div class="sermon-title">Living a Life of Integrity</div>
+            <div class="sermon-excerpt">Walking in truth and honesty as a witness to Christ in all circumstances.</div>
+            <a href="#" class="sermon-link">Listen Now</a>
+          </div>
+        </div>
+        <div class="sermon-card">
+          <div class="sermon-thumb"><div class="sermon-thumb-overlay"></div></div>
+          <div class="sermon-body">
+            <div class="sermon-date">February 16, 2025</div>
+            <div class="sermon-title">The Transforming Power of Forgiveness</div>
+            <div class="sermon-excerpt">How forgiveness breaks chains and restores relationships through Christ's love.</div>
+            <a href="#" class="sermon-link">Listen Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos Section -->
+  <section class="videos">
+    <div class="container">
+      <span class="section-label">Watch & Learn</span>
+      <h2 class="section-title">Featured <em>Teachings on Video</em></h2>
+      <p class="section-body">Experience powerful gospel messages and discipleship teachings from Pastor Naklee through our video library.</p>
+
+      <div class="featured-video">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=1&modestbranding=1&rel=0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
+      </div>
+
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb">
+            <div class="play-button"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg></div>
+          </div>
+          <div class="video-body">
+            <div class="video-date">March 2025</div>
+            <div class="video-title">The Power of God's Word</div>
+            <div class="video-excerpt">Understanding how Scripture shapes our faith and transforms our daily lives.</div>
+            <a href="#" class="video-link">Watch</a>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-thumb">
+            <div class="play-button"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg></div>
+          </div>
+          <div class="video-body">
+            <div class="video-date">February 2025</div>
+            <div class="video-title">Living with Purpose & Vision</div>
+            <div class="video-excerpt">Discover how to align your life with God's purpose and pursue your calling with boldness.</div>
+            <a href="#" class="video-link">Watch</a>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-thumb">
+            <div class="play-button"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg></div>
+          </div>
+          <div class="video-body">
+            <div class="video-date">January 2025</div>
+            <div class="video-title">Discipleship & Growth</div>
+            <div class="video-excerpt">Building strong spiritual foundations through intentional discipleship and community.</div>
+            <a href="#" class="video-link">Watch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources / CTA -->
+  <section class="resources">
+    <div class="container resource-list">
+      <div>
+        <span class="section-label">Ministry Resources</span>
+        <h2 class="section-title">Carefully Crafted <em>Resources</em></h2>
+        <p class="section-body">Devotionals, study guides, and training materials to help you grow in faith.</p>
+        <a href="resources.html" class="nav-cta">Browse Resources</a>
+      </div>
+      <div>
+        <h3>Join the Mailing List</h3>
+        <p>Receive new sermons and resources by email.</p>
+        <a href="mailto:info@nakleequamele.com" class="cta-button">Subscribe</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="contact-cta">
+    <div class="container cta-panel">
+      <div>
+        <h2>Invite the Ministry</h2>
+        <p>For speaking invitations, training, or prayer support, reach out and we will respond promptly.</p>
+        <a href="contact.html" class="btn-primary">Contact Us</a>
+      </div>
+      <div>
+        <p style="color:rgba(255,255,255,0.92)">Email: info@nakleequamele.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-top">
+      <div>
+        <div class="footer-logo">Pastor Naklee <span>Quamele</span></div>
+        <p class="footer-tagline">"Preaching the Gospel · Raising a Generation After God's Heart"</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Ministry</div>
+        <ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="sermons.html">Sermons</a></li><li><a href="training.html">Training</a></li></ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <ul class="footer-links"><li><a href="resources.html">Resources</a></li><li><a href="mailto:info@nakleequamele.com">Email</a></li></ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Connect</div>
+        <ul class="footer-links"><li><a href="contact.html">Contact</a></li><li><a href="tel:+2310770000000">+231 (0) 770 000 000</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">Copyright © 2026 Pastor Naklee Quamele Ministry · Monrovia, Liberia.</p>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // Cursor
+    const dot = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    let mx=-100,my=-100,rx=-100,ry=-100;
+    document.addEventListener('mousemove', e=>{mx=e.clientX; my=e.clientY});
+    (function anim(){ if(dot){ dot.style.left=mx+'px'; dot.style.top=my+'px'; rx+=(mx-rx)*0.12; ry+=(my-ry)*0.12; ring.style.left=rx+'px'; ring.style.top=ry+'px'; } requestAnimationFrame(anim) })();
+
+    // Drawer
+    const btn = document.getElementById('hamburgerBtn');
+    const drawer = document.getElementById('navDrawer');
+    const overlay = document.getElementById('navOverlay');
+    function openDrawer(){ btn.classList.add('open'); drawer.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow='hidden'; }
+    function closeDrawer(){ btn.classList.remove('open'); drawer.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow=''; }
+    btn && btn.addEventListener('click', ()=> drawer.classList.contains('open') ? closeDrawer() : openDrawer());
+    overlay && overlay.addEventListener('click', closeDrawer);
+    document.querySelectorAll('.drawer-link').forEach(l=>l.addEventListener('click', closeDrawer));
+
+    // Simple reveal observer
+    const rev = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    if(rev.length){ const obs = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } }) }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'}); rev.forEach(r=>obs.observe(r)); }
+  </script>
+
+</body>
+</html>
+
