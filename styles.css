@@ -1202,6 +1202,11 @@ section { padding: 100px 24px; position: relative; }
   .hero-content { padding: 48px 28px; }
   .footer-top { grid-template-columns: 1fr 1fr; }
 }
+@media (max-width: 700px) {
+  /* Single full-width column on phones so card margins stay symmetric
+     even when the viewport is narrower than the grid's minimum track */
+  .video-grid, .sermons-grid, .card-grid, .stats-grid { grid-template-columns: 1fr; }
+}
 @media (max-width: 560px) {
   .container { padding: 0 16px; }
   #mainNav { padding: 14px 18px; }
