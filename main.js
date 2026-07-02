@@ -131,6 +131,20 @@
     if (!id) return;
     var title = card.dataset.videoTitle ||
       (card.querySelector('.sermon-title, .video-title') || {}).textContent || 'Watch';
+    // Show the real YouTube thumbnail inside the card so the video is visible
+    var thumb = card.querySelector('.sermon-thumb, .video-thumb');
+    if (thumb && !thumb.querySelector('.yt-thumb')) {
+      var img = document.createElement('img');
+      img.className = 'yt-thumb';
+      img.alt = title;
+      img.loading = 'lazy';
+      img.src = 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg';
+      // Upgrade to HD frame when available (falls back silently if not)
+      var hd = new Image();
+      hd.onload = function () { if (hd.naturalWidth > 120) img.src = hd.src; };
+      hd.src = 'https://i.ytimg.com/vi/' + id + '/maxresdefault.jpg';
+      thumb.insertBefore(img, thumb.firstChild);
+    }
     card.querySelectorAll('.sermon-play, .play-badge, .sermon-link, .video-link, .video-thumb, .sermon-thumb')
       .forEach(function (t) {
         t.addEventListener('click', function (e) { e.preventDefault(); openVideo(id, title); });
