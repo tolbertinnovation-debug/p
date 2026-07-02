@@ -662,18 +662,17 @@ section { padding: 100px 24px; position: relative; }
 .sermon-play {
   position: relative;
   z-index: 2;
-  width: 62px; height: 62px;
+  width: 72px; height: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.25);
-  border: 2px solid rgba(255, 255, 255, 0.85);
+  background: var(--gold);
   border-radius: 50%;
-  backdrop-filter: blur(6px);
+  box-shadow: 0 12px 32px rgba(200, 136, 12, 0.45);
   transition: var(--transition);
 }
-.sermon-card:hover .sermon-play { background: var(--gold); border-color: var(--gold); transform: scale(1.08); }
-.sermon-play svg { width: 22px; height: 22px; fill: #fff; margin-left: 3px; }
+.sermon-card:hover .sermon-play { transform: scale(1.1); box-shadow: 0 16px 48px rgba(200, 136, 12, 0.55); }
+.sermon-play svg { width: 28px; height: 28px; fill: #fff; margin-left: 4px; }
 .sermon-series {
   position: absolute;
   top: 16px; left: 16px;
