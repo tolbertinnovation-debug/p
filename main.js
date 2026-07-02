@@ -77,7 +77,7 @@
   // ---------- Sermon filters ----------
   var filterBtns = document.querySelectorAll('.filter-btn');
   if (filterBtns.length) {
-    var cards = document.querySelectorAll('.sermon-card');
+    var cards = document.querySelectorAll('[data-series]');
     filterBtns.forEach(function (b) {
       b.addEventListener('click', function () {
         filterBtns.forEach(function (x) { x.classList.remove('active'); });
@@ -85,7 +85,7 @@
         var f = b.dataset.filter;
         cards.forEach(function (c) {
           var show = f === 'all' || c.dataset.series === f;
-          c.style.display = show ? 'flex' : 'none';
+          c.style.display = show ? '' : 'none';
         });
       });
     });
