@@ -1003,6 +1003,176 @@ section { padding: 100px 24px; position: relative; }
 .footer-legal a { color: rgba(255, 255, 255, 0.6); }
 .footer-legal a:hover { color: var(--gold); }
 
+/* ---------- Video lightbox modal ---------- */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(6, 10, 20, 0.85);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.video-modal.active { opacity: 1; pointer-events: all; }
+.video-modal-box {
+  width: 100%;
+  max-width: 960px;
+  transform: translateY(24px);
+  transition: transform 0.3s ease;
+}
+.video-modal.active .video-modal-box { transform: none; }
+.video-modal-title {
+  color: #fff;
+  font-family: var(--font-serif-display);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-right: 56px;
+}
+.video-modal-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+}
+.video-modal-frame iframe { width: 100%; height: 100%; border: none; }
+.video-modal-close {
+  position: absolute;
+  top: 20px; right: 20px;
+  width: 44px; height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.video-modal-close:hover { background: var(--gold); border-color: var(--gold); }
+.video-modal-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+}
+.video-modal-link:hover { color: var(--gold); }
+
+/* Speaker attribution + curated note */
+.sermon-speaker {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--text-body);
+  opacity: 0.75;
+  margin: -6px 0 14px;
+}
+.curated-note {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: var(--text-body);
+  opacity: 0.85;
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* ---------- Back to top ---------- */
+.back-to-top {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  z-index: 90;
+  width: 48px; height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--grad-primary);
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(26, 58, 132, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition: var(--transition);
+  cursor: pointer;
+  font-size: 20px;
+}
+.back-to-top.show { opacity: 1; pointer-events: all; transform: none; }
+.back-to-top:hover { transform: translateY(-3px); }
+
+/* Featured video: never clip its content on small screens */
+.featured-video { min-height: 220px; }
+@media (max-width: 560px) {
+  .featured-video { aspect-ratio: auto; }
+  .featured-video iframe { aspect-ratio: 16 / 9; }
+}
+
+/* ---------- Devotional page ---------- */
+.devotional-list {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.devotion-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  border-radius: 12px;
+  padding: 28px 32px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+.devotion-card:hover { box-shadow: var(--shadow-md); }
+.devotion-day {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.devotion-verse {
+  font-family: var(--font-serif-display);
+  font-size: 21px;
+  font-style: italic;
+  color: var(--text-dark);
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+.devotion-ref {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--blue);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.devotion-text { font-size: 15px; color: var(--text-body); line-height: 1.7; margin-bottom: 10px; }
+.devotion-prayer { font-size: 14px; color: var(--text-body); line-height: 1.7; }
+.devotion-prayer strong { color: var(--violet); }
+@media print {
+  #mainNav, .nav-drawer, .nav-overlay, .footer, .back-to-top, .cursor-dot, .cursor-ring,
+  .page-hero .hero-blob, .no-print { display: none !important; }
+  .page-hero.interior { padding: 24px; background: none; }
+  .page-hero.interior h1, .page-hero.interior p { color: #000; text-shadow: none; }
+  section { padding: 12px 0; }
+  .devotion-card { break-inside: avoid; box-shadow: none; }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
   .nav-links, .nav-cta { display: none; }

@@ -91,6 +91,89 @@
     });
   }
 
+  // ---------- Video lightbox ----------
+  var modal, modalTitle, modalFrame, modalLink;
+  function buildModal() {
+    modal = document.createElement('div');
+    modal.className = 'video-modal';
+    modal.innerHTML =
+      '<button class="video-modal-close" aria-label="Close video">&times;</button>' +
+      '<div class="video-modal-box">' +
+      '  <div class="video-modal-title"></div>' +
+      '  <div class="video-modal-frame"></div>' +
+      '  <a class="video-modal-link" target="_blank" rel="noopener">Watch on YouTube &rarr;</a>' +
+      '</div>';
+    document.body.appendChild(modal);
+    modalTitle = modal.querySelector('.video-modal-title');
+    modalFrame = modal.querySelector('.video-modal-frame');
+    modalLink = modal.querySelector('.video-modal-link');
+    modal.querySelector('.video-modal-close').addEventListener('click', closeVideo);
+    modal.addEventListener('click', function (e) { if (e.target === modal) closeVideo(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeVideo(); });
+  }
+  function openVideo(id, title) {
+    if (!modal) buildModal();
+    modalTitle.textContent = title || 'Watch';
+    modalFrame.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id +
+      '?autoplay=1&rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    modalLink.href = 'https://www.youtube.com/watch?v=' + id;
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeVideo() {
+    if (!modal) return;
+    modal.classList.remove('active');
+    modalFrame.innerHTML = '';
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('[data-video]').forEach(function (card) {
+    var id = card.dataset.video;
+    if (!id) return;
+    var title = card.dataset.videoTitle ||
+      (card.querySelector('.sermon-title, .video-title') || {}).textContent || 'Watch';
+    card.querySelectorAll('.sermon-play, .play-badge, .sermon-link, .video-link, .video-thumb, .sermon-thumb')
+      .forEach(function (t) {
+        t.addEventListener('click', function (e) { e.preventDefault(); openVideo(id, title); });
+      });
+  });
+
+  // ---------- Daily verse ----------
+  var verseEl = document.getElementById('dailyVerse');
+  var verseRefEl = document.getElementById('dailyVerseRef');
+  if (verseEl && verseRefEl) {
+    var verses = [
+      ['"Go into all the world and preach the gospel to every creature."', 'Mark 16:15'],
+      ['"I can do all things through Christ who strengthens me."', 'Philippians 4:13'],
+      ['"Trust in the LORD with all your heart, and lean not on your own understanding."', 'Proverbs 3:5'],
+      ['"For I know the plans I have for you, declares the LORD, plans to prosper you and not to harm you."', 'Jeremiah 29:11'],
+      ['"Thy word is a lamp unto my feet, and a light unto my path."', 'Psalm 119:105'],
+      ['"But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles."', 'Isaiah 40:31'],
+      ['"Be strong and of a good courage; be not afraid... for the LORD thy God is with thee."', 'Joshua 1:9'],
+      ['"My grace is sufficient for thee: for my strength is made perfect in weakness."', '2 Corinthians 12:9'],
+      ['"The LORD is my shepherd; I shall not want."', 'Psalm 23:1'],
+      ['"Train up a child in the way he should go: and when he is old, he will not depart from it."', 'Proverbs 22:6'],
+      ['"Let your light so shine before men, that they may see your good works, and glorify your Father."', 'Matthew 5:16'],
+      ['"And we know that all things work together for good to them that love God."', 'Romans 8:28'],
+      ['"Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost."', 'Matthew 28:19'],
+      ['"Draw nigh to God, and he will draw nigh to you."', 'James 4:8']
+    ];
+    var dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0)) / 864e5);
+    var v = verses[dayOfYear % verses.length];
+    verseEl.textContent = v[0];
+    verseRefEl.textContent = v[1];
+  }
+
+  // ---------- Back to top ----------
+  var topBtn = document.createElement('button');
+  topBtn.className = 'back-to-top';
+  topBtn.setAttribute('aria-label', 'Back to top');
+  topBtn.innerHTML = '&uarr;';
+  document.body.appendChild(topBtn);
+  topBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  window.addEventListener('scroll', function () {
+    topBtn.classList.toggle('show', window.scrollY > 600);
+  });
+
   // ---------- Contact form (demo handler) ----------
   var form = document.getElementById('contactForm');
   if (form) {

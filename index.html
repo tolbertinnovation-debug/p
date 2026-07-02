@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Cinzel:wght@400;600;700;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260701" />
+  <link rel="stylesheet" href="styles.css?v=20260702" />
 </head>
 <body>
   <!-- Cursor helpers -->
@@ -72,10 +72,10 @@
     <div class="hero-scroll">Scroll</div>
   </section>
 
-  <!-- Verse banner -->
+  <!-- Verse banner (verse of the day, rotated by main.js) -->
   <div class="verse-banner">
-    <p class="verse-text">"Go into all the world and preach the gospel to every creature."</p>
-    <span class="verse-ref">Mark 16:15</span>
+    <p class="verse-text" id="dailyVerse">"Go into all the world and preach the gospel to every creature."</p>
+    <span class="verse-ref" id="dailyVerseRef">Mark 16:15</span>
   </div>
 
   <!-- About preview -->
@@ -105,46 +105,46 @@
         <a href="sermons.html" class="btn-ghost">View All</a>
       </div>
       <div class="sermons-grid" style="margin-top:56px;">
-        <article class="sermon-card reveal">
+        <article class="sermon-card reveal" data-video="y1Lt5LihES0">
           <div class="sermon-thumb">
             <div class="sermon-thumb-overlay"></div>
             <span class="sermon-series faith">Faith</span>
             <div class="sermon-play"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z" fill="#fff"/></svg></div>
-            <span class="sermon-duration">42 min</span>
           </div>
           <div class="sermon-body">
-            <div class="sermon-date">May 18, 2025</div>
+            <div class="sermon-date">Purpose &amp; Calling</div>
             <div class="sermon-title">Walking in the Purpose of God</div>
+            <span class="sermon-speaker">Teaching video · Dr. Tony Evans</span>
             <div class="sermon-excerpt">Discover how God's purpose for your life unfolds when you surrender fully to His call.</div>
-            <a href="sermons.html" class="sermon-link">Listen Now<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="#" class="sermon-link">Watch Now<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
         </article>
-        <article class="sermon-card reveal delay-1">
+        <article class="sermon-card reveal delay-1" data-video="obu8x0NkB_o">
           <div class="sermon-thumb">
             <div class="sermon-thumb-overlay"></div>
             <span class="sermon-series prayer">Prayer</span>
             <div class="sermon-play"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z" fill="#fff"/></svg></div>
-            <span class="sermon-duration">38 min</span>
           </div>
           <div class="sermon-body">
-            <div class="sermon-date">April 27, 2025</div>
+            <div class="sermon-date">Prayer Life</div>
             <div class="sermon-title">The Power of a Praying Believer</div>
+            <span class="sermon-speaker">Teaching video · Dr. Charles Stanley</span>
             <div class="sermon-excerpt">Prayer is the lifeline of every Christian. Learn practical ways to pray with faith.</div>
-            <a href="sermons.html" class="sermon-link">Listen Now<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="#" class="sermon-link">Watch Now<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
         </article>
-        <article class="sermon-card reveal delay-2">
+        <article class="sermon-card reveal delay-2" data-video="76MfhmhscZU">
           <div class="sermon-thumb">
             <div class="sermon-thumb-overlay"></div>
             <span class="sermon-series discipleship">Discipleship</span>
             <div class="sermon-play"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z" fill="#fff"/></svg></div>
-            <span class="sermon-duration">51 min</span>
           </div>
           <div class="sermon-body">
-            <div class="sermon-date">April 6, 2025</div>
+            <div class="sermon-date">Next Generation</div>
             <div class="sermon-title">Raising the Next Generation for God</div>
+            <span class="sermon-speaker">Teaching video · Priscilla Shirer</span>
             <div class="sermon-excerpt">Training a generation to carry the Gospel forward with passion and integrity.</div>
-            <a href="sermons.html" class="sermon-link">Listen Now<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="#" class="sermon-link">Watch Now<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
         </article>
       </div>
@@ -157,49 +157,43 @@
       <div class="section-head">
         <span class="section-label">Watch &amp; Learn</span>
         <h2 class="section-title">Featured <em>Teachings on Video</em></h2>
-        <p class="section-body">Experience powerful gospel messages and discipleship teachings from Pastor Naklee through our growing video library.</p>
+        <p class="section-body">While Pastor Naklee's own recordings are being prepared for the site, we have curated trusted gospel teachings on each theme from renowned ministers — tap any card to watch instantly.</p>
       </div>
 
-      <!-- TODO: Replace VIDEO_ID with the real featured sermon's YouTube ID, then
-           uncomment the iframe and remove the placeholder block below.
-      <div class="featured-video">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID?controls=1&modestbranding=1&rel=0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
-      </div>
-      -->
+      <!-- Featured: Billy Graham — "Go Into All the World" (Mark 16:15, matching the ministry's theme verse) -->
       <div class="featured-video reveal">
-        <div class="fv-placeholder">
-          <div class="play-badge"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg></div>
-          <div style="font-family:var(--font-serif-display); font-size:28px; font-weight:600; margin-bottom:8px;">Featured Teaching Coming Soon</div>
-          <p style="color:rgba(255,255,255,0.9); max-width:420px; margin:0 auto;">A new video message will be added here shortly.</p>
-        </div>
+        <iframe src="https://www.youtube-nocookie.com/embed/5JxLdbTxxY4?rel=0" title="Go Into All the World — Billy Graham Classic" allowfullscreen allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
       </div>
 
       <div class="video-grid">
-        <article class="video-card reveal">
+        <article class="video-card reveal" data-video="wGMDDejGnEc">
           <div class="video-thumb"><div class="play-badge"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg></div></div>
           <div class="video-body">
-            <div class="video-date">March 2025</div>
+            <div class="video-date">God's Word</div>
             <div class="video-title">The Power of God's Word</div>
+            <span class="sermon-speaker">Teaching video · Dr. Tony Evans</span>
             <div class="video-excerpt">Understanding how Scripture shapes our faith and transforms our daily lives.</div>
-            <a href="sermons.html" class="video-link">Watch</a>
+            <a href="#" class="video-link">Watch</a>
           </div>
         </article>
-        <article class="video-card reveal delay-1">
+        <article class="video-card reveal delay-1" data-video="NYlmi1exHRg">
           <div class="video-thumb"><div class="play-badge"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg></div></div>
           <div class="video-body">
-            <div class="video-date">February 2025</div>
+            <div class="video-date">Purpose &amp; Vision</div>
             <div class="video-title">Living with Purpose &amp; Vision</div>
+            <span class="sermon-speaker">Teaching video · Dr. Tony Evans</span>
             <div class="video-excerpt">Discover how to align your life with God's purpose and pursue your calling with boldness.</div>
-            <a href="sermons.html" class="video-link">Watch</a>
+            <a href="#" class="video-link">Watch</a>
           </div>
         </article>
-        <article class="video-card reveal delay-2">
+        <article class="video-card reveal delay-2" data-video="2zvHD9-KHIg">
           <div class="video-thumb"><div class="play-badge"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg></div></div>
           <div class="video-body">
-            <div class="video-date">January 2025</div>
+            <div class="video-date">Discipleship</div>
             <div class="video-title">Discipleship &amp; Growth</div>
+            <span class="sermon-speaker">Teaching video · David Platt &amp; Francis Chan</span>
             <div class="video-excerpt">Building strong spiritual foundations through intentional discipleship and community.</div>
-            <a href="sermons.html" class="video-link">Watch</a>
+            <a href="#" class="video-link">Watch</a>
           </div>
         </article>
       </div>
@@ -264,7 +258,7 @@
         <div class="footer-col-title">Resources</div>
         <ul class="footer-links">
           <li><a href="resources.html">Study Materials</a></li>
-          <li><a href="resources.html">Devotionals</a></li>
+          <li><a href="devotional.html">Devotionals</a></li>
           <li><a href="mailto:info@nakleequamele.com">Email Us</a></li>
         </ul>
       </div>
@@ -283,6 +277,6 @@
     </div>
   </footer>
 
-  <script src="main.js?v=20260701"></script>
+  <script src="main.js?v=20260702"></script>
 </body>
 </html>
